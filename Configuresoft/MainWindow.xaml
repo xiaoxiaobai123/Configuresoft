@@ -239,10 +239,10 @@
                             </StackPanel>
                             <StackPanel Grid.Column="2">
                                 <TextBlock Text="设置参数"/>
-                                <TextBox x:Name="EnterHChargeAlarm_SettingValue"  Text="" Margin="0,0,2,2" LostFocus="HChargeAlarmWarning_SettingValue_LostFocus "/>
-                                <TextBox x:Name="ExitHChargeAlarm_SettingValue"   Text="" Margin="0,0,2,2" LostFocus="HChargeAlarmWarning_SettingValue_LostFocus "/>
+                                <TextBox x:Name="EnterHChargeAlarm_SettingValue"  Text="" Margin="0,0,2,2" LostFocus="HChargeAlarmWarning_SettingValue_LostFocus"/>
+                                <TextBox x:Name="ExitHChargeAlarm_SettingValue"   Text="" Margin="0,0,2,2" LostFocus="HChargeAlarmWarning_SettingValue_LostFocus"/>
                                 <TextBox x:Name="EnterHChargeWarning_SettingValue" Text="" Margin="0,0,2,2" LostFocus="HChargeAlarmWarning_SettingValue_LostFocus"/>
-                                <TextBox x:Name="ExitHChargeWarning_SettingValue" Text="" Margin="0,0,2,2" LostFocus="HChargeAlarmWarning_SettingValue_LostFocus "/>
+                                <TextBox x:Name="ExitHChargeWarning_SettingValue" Text="" Margin="0,0,2,2" LostFocus="HChargeAlarmWarning_SettingValue_LostFocus"/>
                                 <Button x:Name="WriteHChargeThreshold"  Content="WriteThreshold " Margin="0,0,2,0" Click="WriteHChargeThreshold_Click"/>
                             </StackPanel>
                         </Grid>
@@ -282,7 +282,7 @@
                         </Grid>
                     </GroupBox>
                 </Grid>
-                <TextBlock/>
+                <TextBlock x:Name="HinttextBox" />
 
                 <!--<Grid Grid.Column="0">
                     <Grid.ColumnDefinitions>

@@ -1,1 +1,15 @@
 F:\Work\ConfigureSoft\Configuresoft\Configuresoft\bin\Debug\Configuresoft.exe.config
+C:\Users\Administrator\Documents\GitHub\Configuresoft\Configuresoft\bin\Debug\Configuresoft.exe.config
+C:\Users\Administrator\Documents\GitHub\Configuresoft\Configuresoft\obj\Debug\Configuresoft.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\Configuresoft\Configuresoft\obj\Debug\MainWindow.g.cs
+C:\Users\Administrator\Documents\GitHub\Configuresoft\Configuresoft\obj\Debug\App.g.cs
+C:\Users\Administrator\Documents\GitHub\Configuresoft\Configuresoft\obj\Debug\Configuresoft_MarkupCompile.cache
+C:\Users\Administrator\Documents\GitHub\Configuresoft\Configuresoft\obj\Debug\Configuresoft_MarkupCompile.lref
+C:\Users\Administrator\Documents\GitHub\Configuresoft\Configuresoft\bin\Debug\Configuresoft.exe
+C:\Users\Administrator\Documents\GitHub\Configuresoft\Configuresoft\bin\Debug\Configuresoft.pdb
+C:\Users\Administrator\Documents\GitHub\Configuresoft\Configuresoft\obj\Debug\MainWindow.baml
+C:\Users\Administrator\Documents\GitHub\Configuresoft\Configuresoft\obj\Debug\Configuresoft.g.resources
+C:\Users\Administrator\Documents\GitHub\Configuresoft\Configuresoft\obj\Debug\Configuresoft.Properties.Resources.resources
+C:\Users\Administrator\Documents\GitHub\Configuresoft\Configuresoft\obj\Debug\Configuresoft.csproj.GenerateResource.Cache
+C:\Users\Administrator\Documents\GitHub\Configuresoft\Configuresoft\obj\Debug\Configuresoft.exe
+C:\Users\Administrator\Documents\GitHub\Configuresoft\Configuresoft\obj\Debug\Configuresoft.pdb
