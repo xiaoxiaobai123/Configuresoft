@@ -39,6 +39,7 @@ namespace Configuresoft
 
             for (uint i = 0; i < 9; i++)
             {
+                CurrentState = DataStatus.Receiving;
                 QuerySettingValue((uint)ConfigurationID.CAN_MSG_OVER_VOLTAGE_SETTING + i);
             }
 
@@ -135,6 +136,78 @@ namespace Configuresoft
                             CurrentState = DataStatus.AckReceived;
                             MsgType = MessageType();
                             HintTextShow(MsgType + "设置成功");
+                        }
+                    }
+
+                    if(CurrentState == DataStatus.Receiving)
+                    {
+                        switch (Dc.DeviceStruct.MessageID)
+                        {
+                            case (uint)ConfigurationID.CAN_MSG_OVER_VOLTAGE_SETTING:
+                             //   double a = (double)(frameinfo.data[0] << 8 | frameinfo.data[1]) / 1000.0;
+
+                                Application.Current.Dispatcher.Invoke(new Action(() => {
+                                    CurrentEnterHVolAlarm_SettingValue.Text = ((float)(frameinfo.data[0] << 8 | frameinfo.data[1]) / 1000).ToString();
+                                    CurrentExitHVolAlarm_SettingValue.Text = ((float)(frameinfo.data[2] << 8 | frameinfo.data[3]) / 1000).ToString();
+                                    CurrentEnterHVolWarning_SettingValue.Text = ((float)(frameinfo.data[4] << 8 | frameinfo.data[5]) / 1000).ToString();
+                                    CurrentExitHVolWarning_SettingValue.Text = ((float)(frameinfo.data[6] << 8 | frameinfo.data[7]) / 1000).ToString();
+                                }));
+                               
+                                
+                                break;
+                            case (uint)ConfigurationID.CAN_MSG_UNDER_VOLTAGE_SETTING:
+                             
+
+                                Application.Current.Dispatcher.Invoke(new Action(() => {
+                                    CurrentEnterLVolAlarm_SettingValue.Text = ((float)(frameinfo.data[0] << 8 | frameinfo.data[1]) / 1000).ToString();
+                                    CurrentExitLVolAlarm_SettingValue.Text = ((float)(frameinfo.data[2] << 8 | frameinfo.data[3]) / 1000).ToString();
+                                    CurrentEnterLVolWarning_SettingValue.Text = ((float)(frameinfo.data[4] << 8 | frameinfo.data[5]) / 1000).ToString();
+                                    CurrentExitLVolWarning_SettingValue.Text = ((float)(frameinfo.data[6] << 8 | frameinfo.data[7]) / 1000).ToString();
+                                }));
+                                break;
+                            case (uint)ConfigurationID.CAN_MSG_OVER_TEMP_SETTING:
+             
+
+                                Application.Current.Dispatcher.Invoke(new Action(() => {
+                                    CurrentEnterHTempAlarm_SettingValue.Text = ((float)(frameinfo.data[0] << 8 | frameinfo.data[1]) / 10).ToString();
+                                    CurrentExitHTempAlarm_SettingValue.Text = ((float)(frameinfo.data[2] << 8 | frameinfo.data[3]) / 10).ToString();
+                                    CurrentEnterHTempWarning_SettingValue.Text = ((float)(frameinfo.data[4] << 8 | frameinfo.data[5]) / 10).ToString();
+                                    CurrentExitHTempWarning_SettingValue.Text = ((float)(frameinfo.data[6] << 8 | frameinfo.data[7]) / 10).ToString();
+                                }));
+
+                                break;
+                            case (uint)ConfigurationID.CAN_MSG_UNDER_TEMP_SETTING:
+                                Application.Current.Dispatcher.Invoke(new Action(() => {
+                                    CurrentEnterLTempAlarm_SettingValue.Text = ((float)((Int16)frameinfo.data[0] << 8 | frameinfo.data[1]) / 10).ToString();
+                                    CurrentExitLTempAlarm_SettingValue.Text = ((float)((Int16)frameinfo.data[2] << 8 | frameinfo.data[3]) / 10).ToString();
+                                    CurrentEnterLTempWarning_SettingValue.Text = ((float)((Int16)(frameinfo.data[4] << 8 | frameinfo.data[5])) / 10).ToString();
+                                    CurrentExitLTempWarning_SettingValue.Text = ((float)((Int16)(frameinfo.data[6] << 8 | frameinfo.data[7])) / 10).ToString();
+                                }));
+                                break;
+                            case (uint)ConfigurationID.CAN_MSG_HCR_TEMP_SETTING:
+                                Application.Current.Dispatcher.Invoke(new Action(() => {
+                                    CurrentEnterHChargeAlarm_SettingValue.Text   = ((float)(frameinfo.data[0] << 8 | frameinfo.data[1]) / 100).ToString();
+                                    CurrentExitHChargeAlarm_SettingValue.Text    = ((float)(frameinfo.data[2] << 8 | frameinfo.data[3]) / 100).ToString();
+                                    CurrentEnterHChargeWarning_SettingValue.Text = ((float)((frameinfo.data[4] << 8 | frameinfo.data[5])) / 100).ToString();
+                                    CurrentExitHChargeWarning_SettingValue.Text  = ((float)((frameinfo.data[6] << 8 | frameinfo.data[7])) / 100).ToString();
+                                }));
+                                break;
+                            case (uint)ConfigurationID.CAN_MSG_HDR_TEMP_SETTING:
+                                Application.Current.Dispatcher.Invoke(new Action(() => {
+                                    CurrentEnterHDisChargeAlarm_SettingValue.Text  = ((float)((Int16)(frameinfo.data[0] << 8 | frameinfo.data[1])) / 100).ToString();
+                                    CurrentExitHDisChargeAlarm_SettingValue.Text   = ((float)((Int16)(frameinfo.data[2] << 8 | frameinfo.data[3])) / 100).ToString();
+                                    CurrentEnterHDisChargeWarning_SettingValue.Text = ((float)((Int16)(frameinfo.data[4] << 8 | frameinfo.data[5])) / 100).ToString();
+                                    CurrentExitHDisChargeWarning_SettingValue.Text = ((float)((Int16)(frameinfo.data[6] << 8 | frameinfo.data[7])) / 100).ToString();
+                                }));
+                                break;
+                            case (uint)ConfigurationID.BpCellEEPROMPage_SETTING:
+                                Application.Current.Dispatcher.Invoke(new Action(() => {
+                                    BpNumberRead.Text = frameinfo.data[0].ToString();
+                                    CellNumberRead.Text = frameinfo.data[1].ToString();
+
+
+                                }));
+                                break;
                         }
                     }
           

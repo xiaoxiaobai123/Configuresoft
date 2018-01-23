@@ -79,18 +79,18 @@
                             </StackPanel>
                             <StackPanel Grid.Column="1">
                                 <TextBlock Text="当前参数"/>
-                                <TextBox Text="" Margin="0,0,2,2" IsReadOnly="True"/>
-                                <TextBox Text="" Margin="0,0,2,2" IsReadOnly="True"/>
-                                <TextBox Text="" Margin="0,0,2,2" IsReadOnly="True"/>
-                                <TextBox Text="" Margin="0,0,2,2" IsReadOnly="True"/>
+                                <TextBox x:Name="CurrentEnterHVolAlarm_SettingValue"  Text="" Margin="0,0,2,2" IsReadOnly="True"/>
+                                <TextBox x:Name="CurrentExitHVolAlarm_SettingValue"   Text="" Margin="0,0,2,2" IsReadOnly="True"/>
+                                <TextBox x:Name="CurrentEnterHVolWarning_SettingValue" Text="" Margin="0,0,2,2" IsReadOnly="True"/>
+                                <TextBox x:Name="CurrentExitHVolWarning_SettingValue" Text="" Margin="0,0,2,2" IsReadOnly="True"/>
                                 <Button x:Name="ReadOVThreshold" Content="ReadThreshold" Margin="0,0,2,0" Click="ReadOVThreshold_Click"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2">
                                 <TextBlock Text="设置参数"/>
-                                <TextBox x:Name="EnterHVolAlarm_SettingValue" Text="" Margin="0,0,2,2" LostFocus="OverVolAlarmWarning_SettingValue_LostFocus"/>
-                                <TextBox x:Name="ExitHVolAlarm_SettingValue" Text="" Margin="0,0,2,2" LostFocus="OverVolAlarmWarning_SettingValue_LostFocus"/>
+                                <TextBox x:Name="EnterHVolAlarm_SettingValue"  Text="" Margin="0,0,2,2" LostFocus="OverVolAlarmWarning_SettingValue_LostFocus"/>
+                                <TextBox x:Name="ExitHVolAlarm_SettingValue"   Text="" Margin="0,0,2,2" LostFocus="OverVolAlarmWarning_SettingValue_LostFocus"/>
                                 <TextBox x:Name="EnterHVolWarning_SettingValue" Text="" Margin="0,0,2,2" LostFocus="OverVolAlarmWarning_SettingValue_LostFocus"/>
-                                <TextBox x:Name="ExitHVolWarning_SettingValue" Text="" Margin="0,0,2,2" LostFocus="OverVolAlarmWarning_SettingValue_LostFocus"/>
+                                <TextBox x:Name="ExitHVolWarning_SettingValue"  Text="" Margin="0,0,2,2" LostFocus="OverVolAlarmWarning_SettingValue_LostFocus"/>
                                 <Button x:Name="WriteOVThreshold" Content="WriteThreshold " Margin="0,0,2,0" Click="WriteOVThreshold_Click" />
                             </StackPanel>
                         </Grid>
@@ -113,10 +113,10 @@
                             </StackPanel>
                             <StackPanel Grid.Column="1">
                                 <TextBlock Text="当前参数"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentEnterHTempAlarm_SettingValue"   Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentExitHTempAlarm_SettingValue"    Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentEnterHTempWarning_SettingValue" Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentExitHTempWarning_SettingValue"  Text="" Margin="0,0,2,2"/>
                                 <Button x:Name="ReadHtempThreshold" Content="Read HTemp Threshold" Margin="0,0,2,0" Click="ReadHtempThreshold_Click"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2">
@@ -155,17 +155,17 @@
                             </StackPanel>
                             <StackPanel Grid.Column="1">
                                 <TextBlock Text="当前参数"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentEnterLVolAlarm_SettingValue"   Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentExitLVolAlarm_SettingValue"    Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentEnterLVolWarning_SettingValue" Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentExitLVolWarning_SettingValue"  Text="" Margin="0,0,2,2"/>
                                 <Button x:Name ="ReadLVolThreshold" Content="Read LVol Threshold"  Margin="0,0,2,0" Click="ReadLVolThreshold_Click"/>
 
                             </StackPanel>
                             <StackPanel Grid.Column="2">
                                 <TextBlock Text="设置参数"/>
-                                <TextBox  x:Name="EnterLVolAlarm_SettingValue"  Text="" Margin="0,0,2,2" LostFocus="UnderVolAlarmWarning_SettingValue_LostFocus"/>
-                                <TextBox  x:Name="ExitLVolAlarm_SettingValue"   Text="" Margin="0,0,2,2" LostFocus="UnderVolAlarmWarning_SettingValue_LostFocus"/>
+                                <TextBox  x:Name="EnterLVolAlarm_SettingValue"    Text="" Margin="0,0,2,2" LostFocus="UnderVolAlarmWarning_SettingValue_LostFocus"/>
+                                <TextBox  x:Name="ExitLVolAlarm_SettingValue"     Text="" Margin="0,0,2,2" LostFocus="UnderVolAlarmWarning_SettingValue_LostFocus"/>
                                 <TextBox  x:Name="EnterLVolWarning_SettingValue"  Text="" Margin="0,0,2,2" LostFocus="UnderVolAlarmWarning_SettingValue_LostFocus"/>
                                 <TextBox  x:Name="ExitLVolWarning_SettingValue"   Text="" Margin="0,0,2,2" LostFocus="UnderVolAlarmWarning_SettingValue_LostFocus"/>
                                 <Button x:Name="WriteLVolThreshold" Content="Write LVol Threshold " Margin="0,0,2,0" Click="WriteLVolThreshold_Click"/>
@@ -190,10 +190,10 @@
                             </StackPanel>
                             <StackPanel Grid.Column="1">
                                 <TextBlock Text="当前参数"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentEnterLTempAlarm_SettingValue"    Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentExitLTempAlarm_SettingValue"     Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentEnterLTempWarning_SettingValue"  Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentExitLTempWarning_SettingValue"   Text="" Margin="0,0,2,2"/>
                                 <Button x:Name="ReadLTempThreshold" Content="Read LTemp Threshold" Margin="0,0,2,0" Click="ReadLTempThreshold_Click"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2">
@@ -231,18 +231,18 @@
                             </StackPanel>
                             <StackPanel Grid.Column="1">
                                 <TextBlock Text="当前参数"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentEnterHChargeAlarm_SettingValue"   Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentExitHChargeAlarm_SettingValue"    Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentEnterHChargeWarning_SettingValue" Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentExitHChargeWarning_SettingValue"  Text="" Margin="0,0,2,2"/>
                                 <Button x:Name="ReadHChargeThreshold" Content="ReadThreshold" Margin="0,0,2,0" Click="ReadHChargeThreshold_Click"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2">
                                 <TextBlock Text="设置参数"/>
-                                <TextBox x:Name="EnterHChargeAlarm_SettingValue"  Text="" Margin="0,0,2,2" LostFocus="HChargeAlarmWarning_SettingValue_LostFocus"/>
-                                <TextBox x:Name="ExitHChargeAlarm_SettingValue"   Text="" Margin="0,0,2,2" LostFocus="HChargeAlarmWarning_SettingValue_LostFocus"/>
+                                <TextBox x:Name="EnterHChargeAlarm_SettingValue"   Text="" Margin="0,0,2,2" LostFocus="HChargeAlarmWarning_SettingValue_LostFocus"/>
+                                <TextBox x:Name="ExitHChargeAlarm_SettingValue"    Text="" Margin="0,0,2,2" LostFocus="HChargeAlarmWarning_SettingValue_LostFocus"/>
                                 <TextBox x:Name="EnterHChargeWarning_SettingValue" Text="" Margin="0,0,2,2" LostFocus="HChargeAlarmWarning_SettingValue_LostFocus"/>
-                                <TextBox x:Name="ExitHChargeWarning_SettingValue" Text="" Margin="0,0,2,2" LostFocus="HChargeAlarmWarning_SettingValue_LostFocus"/>
+                                <TextBox x:Name="ExitHChargeWarning_SettingValue"  Text="" Margin="0,0,2,2" LostFocus="HChargeAlarmWarning_SettingValue_LostFocus"/>
                                 <Button x:Name="WriteHChargeThreshold"  Content="WriteThreshold " Margin="0,0,2,0" Click="WriteHChargeThreshold_Click"/>
                             </StackPanel>
                         </Grid>
@@ -265,18 +265,18 @@
                             </StackPanel>
                             <StackPanel Grid.Column="1">
                                 <TextBox Text="当前参数"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
-                                <TextBox Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentEnterHDisChargeAlarm_SettingValue"  Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentExitHDisChargeAlarm_SettingValue"   Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentEnterHDisChargeWarning_SettingValue" Text="" Margin="0,0,2,2"/>
+                                <TextBox x:Name="CurrentExitHDisChargeWarning_SettingValue" Text="" Margin="0,0,2,2"/>
                                 <Button x:Name="ReadDisChargeThreshold" Content="ReadThreshold" Margin="0,0,2,0" Click="ReadDisChargeThreshold_Click"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2">
                                 <TextBlock Text="设置参数"/>
                                 <TextBox  x:Name="EnterHDisChargeAlarm_SettingValue"  Text="" Margin="0,0,2,2" LostFocus="HDisChargeAlarmWarning_SettingValue_LostFocus" />
-                                <TextBox  x:Name="ExitHDisChargeAlarm_SettingValue"   Text="" Margin="0,0,2,2" LostFocus="HDisChargeAlarmWarning_SettingValue_LostFocus" />
+                                <TextBox  x:Name="ExitHDisChargeAlarm_SettingValue"    Text="" Margin="0,0,2,2" LostFocus="HDisChargeAlarmWarning_SettingValue_LostFocus" />
                                 <TextBox  x:Name="EnterHDisChargeWarning_SettingValue" Text="" Margin="0,0,2,2" LostFocus="HDisChargeAlarmWarning_SettingValue_LostFocus" />
-                                <TextBox  x:Name="ExitHDisChargeWarning_SettingValue" Text="" Margin="0,0,2,2" LostFocus="HDisChargeAlarmWarning_SettingValue_LostFocus"  />
+                                <TextBox  x:Name="ExitHDisChargeWarning_SettingValue"  Text="" Margin="0,0,2,2" LostFocus="HDisChargeAlarmWarning_SettingValue_LostFocus"  />
                                 <Button x:Name="WriteDisChargeThreshold" Content="WriteThreshold " Margin="0,0,2,0" Click="WriteDisChargeThreshold_Click"/>
                             </StackPanel>
                         </Grid>

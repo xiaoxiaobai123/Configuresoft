@@ -42,7 +42,7 @@ namespace Configuresoft
 
     public enum DataStatus
     {
-        Idle,Send,WaitAck,AckReceived
+        Idle,Send,WaitAck,AckReceived,Receiving
     }
 
 
